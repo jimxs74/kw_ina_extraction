@@ -1,0 +1,12 @@
+# indriatmoko
+☐ membuat __init__.py, utk path utility module
+☐ membuat jalan baseline tfidf
+☐ membuat jalan baseline textrank
+☐ membuat jalan baseline textrank pke
+☐ membuat jalan standard keyBERT
+
+
+# dosbing
+☐ experiment dengan adjusted w2v textrank
+☐ experiment dengan adjusted keyBERT
+
