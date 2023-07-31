@@ -1,0 +1,70 @@
+dalam penelitian ini akan dilakukan beberapa experiment untuk mendapatkan keyword dalam dataset yang diberikan.
+1. Manual annotation
+2. Standard tfidf
+3. Standard textrank
+4. Improved textrank
+
+# 1. Manual annotation
+Jumlah data yang diambil sebagai experiment berjumlah 1000 dataset. Dataset diperoleh dari extracsi file pdf ke dalam format text dengan pemisahan bagian nomor surat, judul surat dan isi surat. Attachment surat tidak dimasukan dalam subject untuk di anotasi. Tim anotator terdiri dari 2 orang yang melakukan annotasi data sebanyak 550 dengan overlaps antara annotator-1 dan annotator-2 50 surat. Hasil dari anotasi manual dijadikan sebagai gold standard untuk evaluasi hasil dari experiment selanjutnya. proses annotasi memerlukan waktu cukup lama, yaitu 2 minggu untuk 550 data, dikarena tim annotator harus membaca surat secara keseluruhan untuk menentukan keyword yang tepat.
+
+# 2. Standard tfidf
+standard tfidf adalah metode keyword extraksi dengan memperhitungkan parameter, frequency kata dalam dokumen dan jumlah dokumen yang mengandung kata tersebut. Metode ini merupakan metode yang paling sederhana untuk mengekstract keyword dari sebuah dokumen. Metode ini tidak memperhitungkan hubungan antar kata dalam dokumen. Metode ini hanya memperhitungkan kemunculan kata dalam dokumen dan jumlah dokumen yang mengandung kata tersebut. Metode ini tidak memperhitungkan posisi kata dalam dokumen, sehingga kata yang muncul di awal dokumen akan dianggap sama pentingnya dengan kata yang muncul di akhir dokumen. Metode ini juga tidak memperhitungkan part of speech dari kata, sehingga kata yang muncul sebagai noun akan dianggap sama pentingnya dengan kata yang muncul sebagai verb. Metode ini juga tidak memperhitungkan semantik dari kata, sehingga kata yang muncul sebagai kata kunci akan dianggap sama pentingnya dengan kata yang muncul sebagai kata umum. Metode ini hanya memperhitungkan frekuensi kemunculan kata dalam dokumen dan jumlah dokumen yang mengandung kata tersebut.
+
+Untuk mengekstract keyword dari sebuah dokumen dengan menggunakan metode standard tfidf, akan di lakukan beberapa tahapan, yaitu:
+1. text preprocessing
+2. feature extraction
+3. tfidf algorithm
+4. top-n keyword extraction and evaluation
+
+## 2.1 text preprocessing
+text preprocessing dilakukan untuk membersihkan data dari noise, yaitu:
+1. case folding
+2. tokenization
+3. stopword removal
+
+## 2.2 feature extraction
+feature extraction dilakukan untuk mengubah data menjadi vektor, yaitu:
+1. term frequency
+2. inverse document frequency
+
+## 2.3 tfidf algorithm
+tfidf algorithm digunakan untuk menghitung bobot dari setiap term dalam dokumen, yaitu:
+1. tfidf = tf * idf
+2. tf = jumlah kemunculan term dalam dokumen
+3. idf = log (jumlah dokumen / jumlah dokumen yang mengandung term)
+Setiap kata yang sudah di preprocessing akan dihitung bobotnya dengan menggunakan tfidf algorithm.
+
+## 2.4 top-n keyword extraction and evaluation
+dari tabel score yang diperoleh dari tfidf algorithm, akan diambil top-n keyword sebagai hasil ekstraksi keyword. top-n keyword akan di evaluasi dengan menggunakan metode precision, recall, dan f1-score. dengan gold standard yang sudah diperoleh dari metode 1. manual annotation.
+
+# 3. Standard textrank
+Standard textrank adalah metode keyword extraksi dengan memperhitungkan parameter, hubungan antar kata dalam dokumen. Metode ini merupakan metode yang sederhana untuk mengekstract keyword dari sebuah dokumen. Metode ini memperhitungkan hubungan antar kata dalam dokumen. Metode ini memperhitungkan hubungan antar kata dalam dokumen, sehingga kata yang muncul sebagai kata kunci akan dianggap lebih penting daripada kata yang muncul sebagai kata umum.
+
+Although textrank considers the relationship between words, it still tends to use frequent words as keywords. In addition, because textrank involves the construction of word graph and iterative calculation, the extraction speed is slow
+
+Untuk mengekstract keyword dari sebuah dokumen dengan menggunakan metode standard textrank, akan di lakukan beberapa tahapan, yaitu:
+1. text preprocessing
+2. word graph construction
+3. feature extraction
+4. textrank algorithm
+5. top-n keyword extraction and evaluation
+
+## 3.1 text preprocessing
+text preprocessing menggunakan teknik yang sama dengan yang di gunakan pada metode 2. standard tfidf. hasil dari text preprocessing akan berupa text dari dokumen yang sudah di bersihkan dari noise.
+
+## 3.2 word graph construction
+word graph construction dibuat dari hasil text preprocessing. word graph construction berupa graph yang terdiri dari node dan edge. node merupakan kata vocabulary yang sudah di preprocessing, dan edge merupakan hubungan antar kata dalam dokumen. edge dihitung dengan metode word co-occurences matrix dengan windows size yang digunakan 3. windows ini menyesuikan dengan grammar bahasa indonesia yang pada umumnya kata akan mmempunyai hubungan dengan kata yang berada di sebelah kiri dan kanannya sejauh 3 kata. word co-occurences matrix dihitung dengan membagi list kata dalam dokument menjadi ukuran windows size, untuk kemudian dihitung jumlah kemunculan kata dalam windows size tersebut. 
+hasil dari word graph construction akan berupa
+1. word co-occurences matrix
+2. word graph
+
+## 3.3 feature extraction
+feature extraction digunakan untuk mengubah data menjadi vektor, yaitu:
+
+The feature extraction method is used to extract the feature vector of the text, and then the feature vector is used to calculate the similarity between the text and the text, and the similarity is used to construct the text graph. The text graph is used to calculate the importance of the text, and the text is ranked according to the importance of the text. The top N keywords are extracted from the text.
+
+#4. Improved textrank
+Improved textrank merupakan adjustment dari standard textrank. Improved textrank menggunakan word graph, feature extraction yang sama dengan standard textrank. untuk algoritm textrank ada di tambahkan process 
+1. Penambahkan custom stopword yang diambil dan di generate dari keseluruhan dataset. metode ini digunakan untuk mengurangi kelemahan dari algoritm standard textrank. dalam algoritma standard textrank, kata yg sudah di preprocessed yang akan sering muncul akan mempunyai score yang relatif besar, karena kata tersebut mempunya cooccurance yg realtif besar. tidak ada kompensasi idf dalam textrank sehingga top-n keyword akan berisi common term dalam project.
+2. Penghitungan factor posisi kata kunci. Secara manual pada umumnya topik atau permasalahan yang relevan dengan surat akan dijadikan sebagai judul. dengan memperhitungan posisi kata judul akan relatif mempunyai penekanan yang lebih besar daripada kata yang muncul dalam isi surat. dalam metode ini dibuat adjustment weight factor pembeda dari kata di judul dan kata diisi. untuk kata yang ditemukan di judul akan dilakukan pengalian factor 2 sedangkan kata dalam isi surat akan dilakukan pengalian factor 1.
+3. xx

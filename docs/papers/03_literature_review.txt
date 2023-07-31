@@ -1,0 +1,3 @@
+Zhang, S., Ye, R., Wang, J., Yang, K., 2021. A Keyword Extraction Method for Transportation Industry Standards based on improved TextRank, in: 2021 IEEE 3rd International Conference on Frontiers Technology of Information and Computer (ICFTIC). Presented at the 2021 IEEE 3rd International Conference on Frontiers Technology of Information and Computer (ICFTIC), IEEE, Greenville, SC, USA, pp. 236–241. https://doi.org/10.1109/ICFTIC54370.2021.9647206
+
+Zhang dalam paper ini menggunakan implementasi keyword extraction dalam 

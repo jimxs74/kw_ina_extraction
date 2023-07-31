@@ -1,0 +1,47 @@
+Experiment metode dalam sub bab diatas dilakukan dengan environment
+berupa komputer dengan spesifikasi sebagai berikut:
+- Processor: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+- RAM: 16GB
+- OS: Ubuntu 18.04.3 LTS
+- Python: 3.6.9
+- IDE : VS-Code
+
+Experiment dengan metode tfidf, standard textrank, dan improved textrank diperoleh hasil sebagai berikut:
+#1.tfidf
+sample input:
+```sddssd
+```
+hasil prediksi:
+```sddssd
+```
+
+secara keseluruhan hasil evaluasi dengan metode ini adalah sebagai berikut:
+precision: 0.0
+recall: 0.0
+f1: 0.0
+
+#2.standard textrank
+sample input:
+```sddssd
+```
+hasil prediksi:
+```sddssd
+```
+
+secara keseluruhan hasil evaluasi dengan metode ini adalah sebagai berikut:
+precision: 0.0
+recall: 0.0
+f1: 0.0
+
+#3.improved textrank
+sample input:
+```sddssd
+```
+hasil prediksi:
+```sddssd
+```
+
+secara keseluruhan hasil evaluasi dengan metode ini adalah sebagai berikut:
+precision: 0.0
+recall: 0.0
+f1: 0.0
