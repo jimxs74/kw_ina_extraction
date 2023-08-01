@@ -16,12 +16,8 @@ def preprocess(text):
     text = re.sub("(\\d|\\W)+"," ",text)
     text = text.strip()
 
-    with open('./data/stopword_tala_sastrawi.txt', 'r') as f:
-        stopword_tala_sastrawi = [line.strip() for line in f]
-    
-    with open('./result/custom_current_data_stop_word.txt', 'r') as f:
-        stopword_custom = [line.strip() for line in f]
-    stop_words = stopword_tala_sastrawi + stopword_custom
+    with open('./data/all_stop_words.txt', 'r') as f:
+        stop_words = [line.strip() for line in f]
 
     dictionary = ArrayDictionary(stop_words)
     str = StopWordRemover(dictionary)

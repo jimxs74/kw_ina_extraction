@@ -12,24 +12,6 @@ tuning_f_phrase = 3  #score minimum utk bisa disebut frase
 m_prediksi = 3  #jumlah top -n keyword prediksi
 n_top_phrase = 3   #jumlah frase yg akan di cari dalam fungsi get_top_phrase
 
-with open('data/stopword_list_tala.txt', 'r') as f:
-    stopword_list_tala = [line.strip() for line in f]
-
-def preprocess(text):
-    text = re.sub(r"\b[a-zA-Z]\b", "", text)
-    text = re.sub('\s+',' ',text)
-    text = re.sub('[^a-zA-Z]', ' ', text)
-    text = text.lower()
-    text = re.sub("(\\d|\\W)+"," ",text)
-    text = text.strip()
-    stop_factory = StopWordRemoverFactory().get_stop_words()
-    stopword_add_list1 = stopword_list_tala 
-    data = stop_factory + stopword_add_list1
-    dictionary = ArrayDictionary(data)
-    str = StopWordRemover(dictionary)
-    text = str.remove(text)
-    return text
-
 def build_graph(vocab_len, processed_text, vocabulary):
     """
     Builds a weighted edge graph based on co-occurrences of words in the text.
@@ -104,7 +86,7 @@ def get_top_phrase(corpus, n=n_top_phrase):  #perlu ada improvement karena phras
     # perlu di buat filter jika pola tidak mengikuti kaidah kata majemuk indonesia di excludekan.
     return words_freq[:n]
 
-def predict_keywords(text, m=5, f_phrase=5):
+def predict_keywords(text, m=5, f_phrase=5, tuning_multiplier=1):
     """
     Predicts the top m keywords and top f_phrase phrases for the given text.
     processed_text = text keseluruhan
@@ -118,11 +100,12 @@ def predict_keywords(text, m=5, f_phrase=5):
         'Keyword': vocabulary,
         'Score': score
     }).nlargest(m, 'Score')
+    
     bi_trigram = pd.DataFrame(get_top_phrase(text, n=50), columns=['Phrase', 'Score'])
     bi_trigram = bi_trigram[bi_trigram['Score'] >= f_phrase]
     bi_trigram['Tokens'] = bi_trigram['Phrase'].apply(word_tokenize)
     unique_phrases = bi_trigram['Tokens'].values.tolist()
-    keywords, phrase_scores = score_phrases(unique_phrases, vocabulary, score) #BUG_1 not accesed by pylance, krn tidak di gunakan di procss selanjutnya
+    keywords, phrase_scores = score_phrases(unique_phrases, vocabulary, score, tuning_multiplier) #BUG_1 not accesed by pylance, krn tidak di gunakan di procss selanjutnya
     # memasukan score ke dalam dataframe
     bi_trigram = pd.DataFrame({
         'Phrase': keywords,
