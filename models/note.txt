@@ -1,0 +1,1 @@
+- word2vec model diperoleh dari model gensim : idwiki_word2vec_100_new_lower.model

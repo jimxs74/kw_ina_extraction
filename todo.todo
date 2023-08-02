@@ -1,7 +1,7 @@
 # indriatmoko
-☐ membuat __init__.py, utk path utility module
-☐ membuat jalan baseline tfidf
-☐ membuat jalan baseline textrank
+✔ membuat __init__.py, utk path utility module @done(23-08-02 11:23)
+✔ membuat jalan baseline tfidf @done(23-08-02 11:23)
+✔ membuat jalan baseline textrank @done(23-08-02 11:23)
 ☐ membuat jalan baseline textrank pke
 ☐ membuat jalan standard keyBERT
 
