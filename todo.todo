@@ -10,5 +10,7 @@
 ☐ experiment dengan adjusted w2v textrank
 ☐ experiment dengan adjusted keyBERT
 ☐ improvement untuk pemenggalan sentence. saat ini pakai ".", titik dalam surat terkadang bukan akhir dari kalimat, kadnaga msuk dalam numbering, atau akhiran dari singkatan.
+☐ membuat pos tagger bahasa indonesia dari BERT/Spacy/yg lain
+☐ 
 
 
