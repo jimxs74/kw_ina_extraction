@@ -7,10 +7,12 @@
 
 
 # dosbing
-☐ experiment dengan adjusted w2v textrank
-☐ experiment dengan adjusted keyBERT
+✔ experiment dengan adjusted w2v textrank, dengan standard textrank non pke @done(23-08-08 11:26)
+✔ experiment dengan adjusted keyBERT @done(23-08-08 11:26)
 ☐ improvement untuk pemenggalan sentence. saat ini pakai ".", titik dalam surat terkadang bukan akhir dari kalimat, kadnaga msuk dalam numbering, atau akhiran dari singkatan.
 ☐ membuat pos tagger bahasa indonesia dari BERT/Spacy/yg lain
-☐ 
+☐ membuka referensi dari kak Bambang metode dari repo : https://github.com/naiveHobo/TextRank
+☐ mengimplementasikan stopword pada textrank, agar kata2 seperti jtb, project, rjj tidak muncul sebagai kata kunci
+
 
 
