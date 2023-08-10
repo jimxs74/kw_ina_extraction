@@ -2,18 +2,14 @@ et-xmlfile==1.1.0
 filelock==3.12.2
 fsspec==2023.6.0
 huggingface-hub==0.16.4
-ipykernel @ file:///Users/runner/miniforge3/conda-bld/ipykernel_1655369698656/work
-ipython @ file:///Users/runner/miniforge3/conda-bld/ipython_1685727999785/work
 Jinja2==3.1.2
-jupyter_client @ file:///home/conda/feedstock_root/build_artifacts/jupyter_client_1687700988094/work
-jupyter_core @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_d1sy1hlz9t/croot/jupyter_core_1679906585151/work
 keybert==0.7.0
 markdown-it-py==3.0.0
 MarkupSafe==2.1.3
-networkx @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_b9af3smw_7/croot/networkx_1690562010704/work
+networkx
 nlp-id==0.1.15.0
-nltk @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_ebiuq9880w/croot/nltk_1688114154971/work
-numpy @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_07nxtsrh3m/croot/numpy_and_numpy_base_1687466221183/work
+nltk
+numpy
 openpyxl==3.0.10
 pandas==1.5.3
 Pillow==10.0.0
@@ -22,13 +18,12 @@ pytest==7.3.1
 rich==13.5.1
 safetensors==0.3.1
 Sastrawi==1.0.1
-scikit-learn @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_b53p48pwor/croot/scikit-learn_1684954746053/work
-scipy==1.10.1
+scikit-learn
 sentence-transformers==2.2.2
 sentencepiece==0.1.99
 tokenizers==0.13.3
 torch==2.0.1
 torchvision==0.15.2
-tqdm @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_ac7zic_tin/croot/tqdm_1679561870178/work
+tqdm
 transformers==4.31.0
 wget==3.2
