@@ -6,9 +6,14 @@ from utils.ia_textrank import (
 from utils.ia_evaluation import check_similarity, eval, evaluate_prediction, summarize_evaluation, evaluate_pred_vs_goldtruth
 from utils.ia_file_operation import write_excel
 
-#from utils.pke_base import
+#import utils.pke_textrank as textrank
+#import utils.pke_base as base
+
+from utils.pke_textrank import TextRank
+from utils.pke_base import LoadFile
 #from utils.pke_data_structures import
 #from utils.pke_readers import
-from utils.pke_textrank import TextRank
+
+
 
 
