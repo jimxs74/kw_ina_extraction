@@ -1,18 +1,21 @@
-# indriatmoko
 ✔ membuat __init__.py, utk path utility module @done(23-08-02 11:23)
 ✔ membuat jalan baseline tfidf @done(23-08-02 11:23)
 ✔ membuat jalan baseline textrank @done(23-08-02 11:23)
-☐ membuat jalan baseline textrank pke
-☐ membuat jalan standard keyBERT
-
-
-# dosbing
+✔ membuat jalan baseline textrank pke @done(23-08-14 18:41)
+✔ membuat jalan standard keyBERT @done(23-08-14 18:42)
 ✔ experiment dengan adjusted w2v textrank, dengan standard textrank non pke @done(23-08-08 11:26)
 ✔ experiment dengan adjusted keyBERT @done(23-08-08 11:26)
 ☐ improvement untuk pemenggalan sentence. saat ini pakai ".", titik dalam surat terkadang bukan akhir dari kalimat, kadnaga msuk dalam numbering, atau akhiran dari singkatan.
 ☐ membuat pos tagger bahasa indonesia dari BERT/Spacy/yg lain
 ☐ membuka referensi dari kak Bambang metode dari repo : https://github.com/naiveHobo/TextRank
 ☐ mengimplementasikan stopword pada textrank, agar kata2 seperti jtb, project, rjj tidak muncul sebagai kata kunci
+☐ implementasi posisi kata di judul atau body, untuk scoring
+☐ implementasi jenis kata : verb / noun dg scoring
+✔ membuat tool adjustment stopword @done(23-08-14 19:57)
+☐ menggunakan w2v_200
+☐ modify standard textrank saat ini yg hanya deteksi unigram menjadi bisa deteksi phrase dengan tool frekeuency
+☐ finetuning word2vec gensim
+
 
 
 
