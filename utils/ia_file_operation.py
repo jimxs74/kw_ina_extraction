@@ -60,3 +60,10 @@ def write_excel(df, sheet_name, filename):
     if 'tmp_filename' in locals():
         import shutil
         shutil.move(tmp_filename, filename)
+
+def save_df_to_excel(df, output_filename, worksheet_name):
+    """
+    Save a pandas DataFrame to an Excel file.
+    """
+    with pd.ExcelWriter(output_filename) as writer:
+        df.to_excel(writer, sheet_name=worksheet_name, index=False)
