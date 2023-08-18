@@ -2,7 +2,6 @@ from openpyxl import load_workbook, Workbook
 import pandas as pd
 import tempfile
 
-"""
 def write_excel(df, sheet_name, filename):
     """
     Writes the given dataframe to an excel file with the given filename and sheet name.
@@ -24,8 +23,8 @@ def write_excel(df, sheet_name, filename):
         
     df.to_excel(writer, sheet_name=sheet_name, index=False)
     writer.save()
-"""
 
+'''
 def write_excel(df, sheet_name, filename):
     """
     Writes the given dataframe to an excel file with the given filename and sheet name.
@@ -60,6 +59,8 @@ def write_excel(df, sheet_name, filename):
     if 'tmp_filename' in locals():
         import shutil
         shutil.move(tmp_filename, filename)
+
+'''
 
 def save_df_to_excel(df, output_filename, worksheet_name):
     """
