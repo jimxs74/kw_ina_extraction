@@ -8,13 +8,14 @@
 ☐ improvement untuk pemenggalan sentence. saat ini pakai ".", titik dalam surat terkadang bukan akhir dari kalimat, kadnaga msuk dalam numbering, atau akhiran dari singkatan.
 ☐ membuat pos tagger bahasa indonesia dari BERT/Spacy/yg lain
 ☐ membuka referensi dari kak Bambang metode dari repo : https://github.com/naiveHobo/TextRank
-☐ mengimplementasikan stopword pada textrank, agar kata2 seperti jtb, project, rjj tidak muncul sebagai kata kunci
-☐ implementasi posisi kata di judul atau body, untuk scoring
-☐ implementasi jenis kata : verb / noun dg scoring
+✔ mengimplementasikan stopword pada textrank, agar kata2 seperti jtb, project, rjj tidak muncul sebagai kata kunci @done(23-08-18 20:56)
+✔ implementasi posisi kata di judul atau body, untuk scoring @done(23-08-18 20:56)
+✔ implementasi jenis kata : verb / noun dg scoring @done(23-08-18 20:56)
 ✔ membuat tool adjustment stopword @done(23-08-14 19:57)
-☐ menggunakan w2v_200
+✔ menggunakan w2v_200 @done(23-08-18 20:56)
 ☐ modify standard textrank saat ini yg hanya deteksi unigram menjadi bisa deteksi phrase dengan tool frekeuency
 ☐ finetuning word2vec gensim
+☐ training and fine tuning .pkl di nlp id
 
 
 
