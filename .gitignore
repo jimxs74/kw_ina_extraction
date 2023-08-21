@@ -21,3 +21,6 @@ venv.bak/
 temp/
 *.model
 *.npy
+
+#folder
+pdf_folder/
