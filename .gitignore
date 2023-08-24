@@ -21,6 +21,7 @@ venv.bak/
 temp/
 *.model
 *.npy
+*.pkl
 
 #folder
 pdf_folder/
