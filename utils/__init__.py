@@ -9,7 +9,7 @@ from utils.ia_file_operation import write_excel, save_df_to_excel
 #import utils.pke_textrank as textrank
 #import utils.pke_base as base
 
-from utils.pke_textrank import TextRank
+#from pke_textrank.textrank import TextRank
 from utils.pke_base import LoadFile
 #from utils.pke_data_structures import
 #from utils.pke_readers import
