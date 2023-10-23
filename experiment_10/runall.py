@@ -8,7 +8,8 @@ notebooks =("1_tr_phrase_countvectorizer.ipynb",
             "3_tr_posfilter.ipynb", 
             "4_tr_posfilter_posisi.ipynb",
             "5_tr_weightscorephrases.ipynb", 
-            "6_tr_tfidfscore.ipynb")
+            "6_tr_tfidfscore.ipynb",
+            "summary")
 
 # Iterate over the list and execute each notebook
 for notebook in notebooks:

@@ -1,0 +1,7 @@
+index dataset bermasalah
+- 394 : kalimatnya terlalu singkat jadi kalau di buat index hanya berjumlah 8 saja. saat dibuat top-10 tidak bisa
+- 424
+
+solusi : 
+- di ganti data baru saja
+- 
