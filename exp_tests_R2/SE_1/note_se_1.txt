@@ -1,0 +1,8 @@
+modifikasi
+1. phrase menggantikan 2/3 token yg berdiri sendiri (done buruk)
+2. phrase di letakan di awal token pertama (132 done)
+3. phrase di letakan di akhir token 2
+4. phrase di buat 2x di sebelum token awal dan setelah token akhir (134 done)
+
+5. mencari word embedding terbagus untuk menangani phrase utk bahasa indonesia : fasttext di training 4-5 jam
+disave sebagai varians B dari 132 dan 134

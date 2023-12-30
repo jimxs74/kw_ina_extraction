@@ -23,6 +23,13 @@ temp/
 *.npy
 *.pkl
 *.bz2
+*.bin
 
 #folder
 pdf_folder/
+extracted_text/
+
+#bigfile
+models/embedding_model/fasttext_ina_100_with_phrases.bin
+models/embedding_model/temp_sentences_with_phrases.txt
+models/embedding_model/processed_wiki_id.txt
