@@ -1,8 +1,32 @@
-modifikasi
+Modifikasi
 1. phrase menggantikan 2/3 token yg berdiri sendiri (done buruk)
 2. phrase di letakan di awal token pertama (132 done)
 3. phrase di letakan di akhir token 2
 4. phrase di buat 2x di sebelum token awal dan setelah token akhir (134 done)
+5. mencari word embedding terbagus untuk menangani phrase utk bahasa indonesia : fasttext di training 4-5 jam disave sebagai varians B dari 132 dan 134
+6. check jika POS tidak ada : 134c
+7. phrase bobotnya di peroleh dari penambahan score kata pendukungnya : 134d
 
-5. mencari word embedding terbagus untuk menangani phrase utk bahasa indonesia : fasttext di training 4-5 jam
-disave sebagai varians B dari 132 dan 134
+
+variation : 
+1. bagiamana jika running di google collabs, apakah akan lebih cepat dari PC. setup caranya
+2. membuat nlp_id, buka lokal dan pakai data trainingnya sendiri (done dipraktikan di 134d)
+3. Ambil data dari gdrive utk dataset
+4. jika menggunakan kaggle bagaimana?
+5. fungsi autopush/pull yg ada dalam extension
+
+
+Index experiment 1
+1. SE11 : TFIDF dengan countvectorizer (done)
+2. S12 : textrank dengan CV dan score phrase diperoleh dari penambahan score token pembentuknya
+    S122 : Textrank dg nx.graph
+3. SE13 : adjusted textrank, phrase menggantikan token pembentuknya 
+   SE132 : phrase di letakan di awal toke pertama
+   - SE132a : phrase di letakan di awal toke pertama
+   - SE132b : menggunakan POS filter dan pembobotan score phrase dari weight adjustment
+   - SE132c : tidak menggunakan POS filter dan pembobotan score phrase dari weight adjustment
+   - SE132d : tidak menggunakan POS filter dan pembobotan score phrase akan dibuat dari token pembentuknya (31 dec '23)
+
+   SE134 : phrase di buat muncul 2x di sebelum kata pertama dan setelah kata terkhir
+   - SE134b : menggunakan POS filter dan pembobotan score phrase dari weight adjustment
+   - SE134c : tidak menggunakan POS filter dan pembobotan score phrase dari weight adjustment
