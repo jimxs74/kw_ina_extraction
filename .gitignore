@@ -28,6 +28,7 @@ temp/
 #folder
 pdf_folder/
 extracted_text/
+stopwords_tuning/
 
 #bigfile
 models/embedding_model/fasttext_ina_100_with_phrases.bin
